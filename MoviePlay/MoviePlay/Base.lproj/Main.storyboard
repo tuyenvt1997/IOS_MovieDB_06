@@ -83,6 +83,66 @@
             </objects>
             <point key="canvasLocation" x="2247.1999999999998" y="-250.52473763118442"/>
         </scene>
+        <!--Xem chi Tiết-->
+        <scene sceneID="L70-Eh-tu9">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="r0i-yn-hMG" customClass="DetailViewController" customModule="MoviePlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJS-3d-MMx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iaq-64-Gs5">
+                                <rect key="frame" x="10" y="84" width="187.5" height="222.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqj-d9-E2z" customClass="YTPlayerView">
+                                <rect key="frame" x="10" y="406.5" width="355" height="167"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVb-32-31W">
+                                <rect key="frame" x="10" y="346.5" width="365" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X7-zo-Kkq">
+                                <rect key="frame" x="198" y="84" width="177" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oVb-32-31W" firstAttribute="leading" secondItem="KFV-si-vpz" secondAttribute="leading" constant="10" id="55c-i1-sYq"/>
+                            <constraint firstItem="wqj-d9-E2z" firstAttribute="top" secondItem="oVb-32-31W" secondAttribute="bottom" constant="40" id="60N-4z-v5a"/>
+                            <constraint firstItem="wqj-d9-E2z" firstAttribute="top" secondItem="iaq-64-Gs5" secondAttribute="bottom" constant="100" id="F6a-GW-clk"/>
+                            <constraint firstItem="wqj-d9-E2z" firstAttribute="height" secondItem="dJS-3d-MMx" secondAttribute="height" multiplier="1:4" id="Op8-YW-kQg"/>
+                            <constraint firstItem="KFV-si-vpz" firstAttribute="trailing" secondItem="7X7-zo-Kkq" secondAttribute="trailing" id="TQu-tq-E2J"/>
+                            <constraint firstItem="iaq-64-Gs5" firstAttribute="height" secondItem="dJS-3d-MMx" secondAttribute="height" multiplier="1:3" id="TVg-G8-I1a"/>
+                            <constraint firstItem="KFV-si-vpz" firstAttribute="trailing" secondItem="wqj-d9-E2z" secondAttribute="trailing" constant="10" id="WWT-ze-kDr"/>
+                            <constraint firstItem="iaq-64-Gs5" firstAttribute="leading" secondItem="KFV-si-vpz" secondAttribute="leading" constant="10" id="ZKc-0G-Lma"/>
+                            <constraint firstItem="7X7-zo-Kkq" firstAttribute="top" secondItem="iaq-64-Gs5" secondAttribute="top" id="dUv-Rz-tH6"/>
+                            <constraint firstItem="iaq-64-Gs5" firstAttribute="width" secondItem="dJS-3d-MMx" secondAttribute="width" multiplier="1:2" id="dys-gO-XqQ"/>
+                            <constraint firstItem="7X7-zo-Kkq" firstAttribute="leading" secondItem="iaq-64-Gs5" secondAttribute="trailing" id="ee3-U8-gUm"/>
+                            <constraint firstItem="KFV-si-vpz" firstAttribute="trailing" secondItem="oVb-32-31W" secondAttribute="trailing" id="ulu-CI-q4l"/>
+                            <constraint firstItem="iaq-64-Gs5" firstAttribute="top" secondItem="KFV-si-vpz" secondAttribute="top" constant="20" id="yZq-hG-QN6"/>
+                            <constraint firstItem="wqj-d9-E2z" firstAttribute="leading" secondItem="KFV-si-vpz" secondAttribute="leading" constant="10" id="z1Y-MW-dSJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KFV-si-vpz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Xem chi Tiết" id="aCn-FT-GPd"/>
+                    <connections>
+                        <outlet property="imageDetail" destination="iaq-64-Gs5" id="lNo-5B-9OJ"/>
+                        <outlet property="nameDetail" destination="7X7-zo-Kkq" id="zli-eo-9RE"/>
+                        <outlet property="nameTrailer" destination="oVb-32-31W" id="kcx-9x-yS4"/>
+                        <outlet property="playVideoUIView" destination="wqj-d9-E2z" id="So5-Z5-0N6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vce-Lp-6uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5036" y="-985.45727136431788"/>
+        </scene>
         <!--Xem Tất Cả-->
         <scene sceneID="1Af-XN-oSI">
             <objects>
@@ -248,6 +308,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2M-Uu-IrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3140" y="-251.42428785607197"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7EX-tO-jVi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dVh-QZ-VRO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zwl-3l-DAr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r0i-yn-hMG" kind="relationship" relationship="rootViewController" id="6Si-27-SSt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PpI-oG-izk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4096.8000000000002" y="-985.45727136431788"/>
         </scene>
     </scenes>
     <resources>

@@ -7,7 +7,8 @@ target 'MoviePlay' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'Reusable'
-  pod 'Kingfisher' 
+  pod 'Kingfisher'
+  pod 'youtube-ios-player-helper' 
   # Pods for MoviePlay
 
 end

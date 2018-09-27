@@ -34,8 +34,12 @@
 		045000F3215B647800222A6E /* ListMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045000F2215B647800222A6E /* ListMovieRequest.swift */; };
 		045000F5215B658200222A6E /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045000F4215B658200222A6E /* MovieResponse.swift */; };
 		045000F7215B731F00222A6E /* ListMovieType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045000F6215B731F00222A6E /* ListMovieType.swift */; };
+		0455A267216309C7007EF470 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455A266216309C7007EF470 /* DetailViewController.swift */; };
 		045CE93F215DC27E00EF8FD9 /* LoadMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CE93E215DC27E00EF8FD9 /* LoadMoreViewController.swift */; };
 		045CE941215E20F700EF8FD9 /* LoadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CE940215E20F700EF8FD9 /* LoadCollectionViewCell.swift */; };
+		04F9DC5921645F250035938C /* GetTrailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9DC5821645F250035938C /* GetTrailer.swift */; };
+		04F9DC5B21645F8D0035938C /* KeyTrailerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9DC5A21645F8D0035938C /* KeyTrailerRequest.swift */; };
+		04F9DC5D2164606C0035938C /* KeyTrailerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9DC5C2164606C0035938C /* KeyTrailerResponse.swift */; };
 		D9AE83C590228F206CFA87B3 /* Pods_MoviePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EE3B8B07995CD8E312357 /* Pods_MoviePlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +73,12 @@
 		045000F2215B647800222A6E /* ListMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieRequest.swift; sourceTree = "<group>"; };
 		045000F4215B658200222A6E /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		045000F6215B731F00222A6E /* ListMovieType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieType.swift; sourceTree = "<group>"; };
+		0455A266216309C7007EF470 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		045CE93E215DC27E00EF8FD9 /* LoadMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreViewController.swift; sourceTree = "<group>"; };
 		045CE940215E20F700EF8FD9 /* LoadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCollectionViewCell.swift; sourceTree = "<group>"; };
+		04F9DC5821645F250035938C /* GetTrailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrailer.swift; sourceTree = "<group>"; };
+		04F9DC5A21645F8D0035938C /* KeyTrailerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTrailerRequest.swift; sourceTree = "<group>"; };
+		04F9DC5C2164606C0035938C /* KeyTrailerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTrailerResponse.swift; sourceTree = "<group>"; };
 		146EE3B8B07995CD8E312357 /* Pods_MoviePlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviePlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F13ED2CA5A1A5F17010E7E4 /* Pods-MoviePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviePlay/Pods-MoviePlay.release.xcconfig"; sourceTree = "<group>"; };
 		95D338C479005AC5C5DB7089 /* Pods-MoviePlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviePlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviePlay/Pods-MoviePlay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +119,7 @@
 			children = (
 				04213BE52158839400CD9E0D /* API */,
 				045CE93D215DC26500EF8FD9 /* LoadMore */,
-				045000E3215B1CCD00222A6E /* ScreenSearch */,
+				0455A2652163097B007EF470 /* ScreenDetail */,
 				045000E0215B1B1400222A6E /* ScreenHome */,
 				0415FF5321549B0D0036011D /* Main.storyboard */,
 				0415FF4F21549B0D0036011D /* AppDelegate.swift */,
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				04213BE92158B72800CD9E0D /* BaseRequest.swift */,
+				04F9DC5A21645F8D0035938C /* KeyTrailerRequest.swift */,
 				04213BEB2158B75C00CD9E0D /* SearchRequest.swift */,
 				04213BF42158CFE800CD9E0D /* TitleRequest.swift */,
 				045000F2215B647800222A6E /* ListMovieRequest.swift */,
@@ -161,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				04213BF22158C3FF00CD9E0D /* SearchResponse.swift */,
+				04F9DC5C2164606C0035938C /* KeyTrailerResponse.swift */,
 				04213BFB2158DA3500CD9E0D /* TitleResponse.swift */,
 				045000F4215B658200222A6E /* MovieResponse.swift */,
 			);
@@ -183,6 +193,7 @@
 				04213BFD2158DC3800CD9E0D /* Title.swift */,
 				045000F0215B621500222A6E /* Movie.swift */,
 				04213BEF2158BD4000CD9E0D /* BaseModel.swift */,
+				04F9DC5821645F250035938C /* GetTrailer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,13 +205,6 @@
 				045000E4215B272D00222A6E /* ScreenHomeCell */,
 			);
 			path = ScreenHome;
-			sourceTree = "<group>";
-		};
-		045000E3215B1CCD00222A6E /* ScreenSearch */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ScreenSearch;
 			sourceTree = "<group>";
 		};
 		045000E4215B272D00222A6E /* ScreenHomeCell */ = {
@@ -220,6 +224,14 @@
 				045000EB215B27F800222A6E /* HomeCollectionViewCell.xib */,
 			);
 			path = CollectionHomeCell;
+			sourceTree = "<group>";
+		};
+		0455A2652163097B007EF470 /* ScreenDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0455A266216309C7007EF470 /* DetailViewController.swift */,
+			);
+			path = ScreenDetail;
 			sourceTree = "<group>";
 		};
 		045CE93D215DC26500EF8FD9 /* LoadMore */ = {
@@ -348,6 +360,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -355,6 +368,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,6 +384,8 @@
 			files = (
 				045000F7215B731F00222A6E /* ListMovieType.swift in Sources */,
 				04213BF02158BD4000CD9E0D /* BaseModel.swift in Sources */,
+				04F9DC5921645F250035938C /* GetTrailer.swift in Sources */,
+				0455A267216309C7007EF470 /* DetailViewController.swift in Sources */,
 				04213BE4215880A300CD9E0D /* ServerManager.swift in Sources */,
 				045000F5215B658200222A6E /* MovieResponse.swift in Sources */,
 				04213BE7215883C200CD9E0D /* Collection.swift in Sources */,
@@ -386,11 +402,13 @@
 				04213BFE2158DC3800CD9E0D /* Title.swift in Sources */,
 				045000EC215B27F800222A6E /* HomeCollectionViewCell.swift in Sources */,
 				045000E2215B1B5200222A6E /* HomeViewController.swift in Sources */,
+				04F9DC5B21645F8D0035938C /* KeyTrailerRequest.swift in Sources */,
 				04213BEC2158B75C00CD9E0D /* SearchRequest.swift in Sources */,
 				0415FF5821549B0D0036011D /* MoviePlay.xcdatamodeld in Sources */,
 				0415FF5021549B0D0036011D /* AppDelegate.swift in Sources */,
 				045000E7215B276400222A6E /* HomeTableViewCell.swift in Sources */,
 				045CE941215E20F700EF8FD9 /* LoadCollectionViewCell.swift in Sources */,
+				04F9DC5D2164606C0035938C /* KeyTrailerResponse.swift in Sources */,
 				04213BFA2158D8D000CD9E0D /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

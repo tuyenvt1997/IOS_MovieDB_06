@@ -22,6 +22,8 @@ class Movie: Mappable {
         mapping(map: map)
     }
     
+    init() {}
+    
     func mapping(map: Map) {
        id <- map["id"]
        title <- map["title"]
@@ -32,7 +34,7 @@ class Movie: Mappable {
        originalTitle <- map["original_title"]
     }
     
-    func getURLImage() -> String{
+    func getURLImage() -> String {
         return URLs.urlPosterImage + posterPath + "?api_key=" + APIKey.key
     }
 }

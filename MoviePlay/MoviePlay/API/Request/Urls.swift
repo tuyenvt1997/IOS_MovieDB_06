@@ -11,6 +11,8 @@ import Foundation
 struct URLs {
     private static var aPIBaseUrl = "https://api.themoviedb.org/3"
     
+    public static var urlYoutobe = "https://www.youtube.com/embed"
+    
     public static let aPISearchCollection = aPIBaseUrl + "/search/collection"
     
     public static let aPITitleCollection = aPIBaseUrl + "/genre/movie/list"
@@ -27,5 +29,7 @@ struct URLs {
     
     public static let urlPosterImage = "https://image.tmdb.org/t/p/w300_and_h450_bestv2"
     
+    public static let trailer = aPIBaseUrl + "/movie/"
+
 }
 
