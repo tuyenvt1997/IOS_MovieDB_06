@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import Foundation
 import ObjectMapper
 
-class Title {
+class Title: Mappable {
     var id: Int = 0
     var name = ""
     

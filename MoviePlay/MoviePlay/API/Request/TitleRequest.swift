@@ -10,9 +10,9 @@ import Foundation
 
 class TitleRequest: BaseRequest {
     
-    required init(language: String) {
+    required init() {
         let body: [String: Any] = [
-            "language": language
+            "api_key": APIKey.key
         ]
         super.init(url:URLs.aPITitleCollection, requestType: .get, body: body)
     }

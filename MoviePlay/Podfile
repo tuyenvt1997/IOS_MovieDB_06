@@ -6,6 +6,8 @@ target 'MoviePlay' do
   use_frameworks!
   pod 'Alamofire'
   pod 'ObjectMapper'
+  pod 'Reusable'
+  pod 'Kingfisher' 
   # Pods for MoviePlay
 
 end
