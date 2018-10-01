@@ -9,11 +9,17 @@
 import UIKit
 import Reusable
 
-class HomeTableViewCell: UITableViewCell, NibReusable {
+protocol HomeTableViewCellDelegate: class {
+    func clickLoadAll(cell: HomeTableViewCell)
+}
+
+class HomeTableViewCell: UITableViewCell, NibReusable  {
 
     @IBOutlet private weak var homeLabel: UILabel!
     @IBOutlet private weak var homeCollection: UICollectionView!
     
+    weak var delegate: HomeTableViewCellDelegate?
+
     func configview() {          
         homeCollection.register(cellType: HomeCollectionViewCell.self)
     }
@@ -28,6 +34,13 @@ class HomeTableViewCell: UITableViewCell, NibReusable {
         homeCollection.tag = tag
         homeCollection.dataSource = viewController as? UICollectionViewDataSource
     }
-
+    
+    func getTag() -> Int {
+        return homeCollection.tag
+    }
+    
+    @IBAction func handleLoadMoreAction(_ sender: Any) {
+        delegate?.clickLoadAll(cell: self)
+    }
 }
 

@@ -52,6 +52,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as HomeTableViewCell
         cell.setContentForCell(text: array[indexPath.row].name, tag: indexPath.row, viewController: self)
+        cell.delegate = self
         return cell
     }
 }
@@ -68,3 +69,10 @@ extension HomeViewController : UICollectionViewDataSource {
     }
 }
 
+extension HomeViewController : HomeTableViewCellDelegate {
+    func clickLoadAll(cell: HomeTableViewCell) {
+        let loadMore = LoadMoreViewController.instantiate()
+        loadMore.arrayLoadMore = arrayResponse[cell.getTag()].movies
+        self.navigationController?.pushViewController(loadMore, animated: true)
+    }
+}

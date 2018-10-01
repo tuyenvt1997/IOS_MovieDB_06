@@ -34,6 +34,8 @@
 		045000F3215B647800222A6E /* ListMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045000F2215B647800222A6E /* ListMovieRequest.swift */; };
 		045000F5215B658200222A6E /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045000F4215B658200222A6E /* MovieResponse.swift */; };
 		045000F7215B731F00222A6E /* ListMovieType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045000F6215B731F00222A6E /* ListMovieType.swift */; };
+		045CE93F215DC27E00EF8FD9 /* LoadMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CE93E215DC27E00EF8FD9 /* LoadMoreViewController.swift */; };
+		045CE941215E20F700EF8FD9 /* LoadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CE940215E20F700EF8FD9 /* LoadCollectionViewCell.swift */; };
 		D9AE83C590228F206CFA87B3 /* Pods_MoviePlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146EE3B8B07995CD8E312357 /* Pods_MoviePlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		045000F2215B647800222A6E /* ListMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieRequest.swift; sourceTree = "<group>"; };
 		045000F4215B658200222A6E /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		045000F6215B731F00222A6E /* ListMovieType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieType.swift; sourceTree = "<group>"; };
+		045CE93E215DC27E00EF8FD9 /* LoadMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreViewController.swift; sourceTree = "<group>"; };
+		045CE940215E20F700EF8FD9 /* LoadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCollectionViewCell.swift; sourceTree = "<group>"; };
 		146EE3B8B07995CD8E312357 /* Pods_MoviePlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviePlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F13ED2CA5A1A5F17010E7E4 /* Pods-MoviePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviePlay/Pods-MoviePlay.release.xcconfig"; sourceTree = "<group>"; };
 		95D338C479005AC5C5DB7089 /* Pods-MoviePlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviePlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviePlay/Pods-MoviePlay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				04213BE52158839400CD9E0D /* API */,
+				045CE93D215DC26500EF8FD9 /* LoadMore */,
 				045000E3215B1CCD00222A6E /* ScreenSearch */,
 				045000E0215B1B1400222A6E /* ScreenHome */,
 				0415FF5321549B0D0036011D /* Main.storyboard */,
@@ -215,6 +220,15 @@
 				045000EB215B27F800222A6E /* HomeCollectionViewCell.xib */,
 			);
 			path = CollectionHomeCell;
+			sourceTree = "<group>";
+		};
+		045CE93D215DC26500EF8FD9 /* LoadMore */ = {
+			isa = PBXGroup;
+			children = (
+				045CE93E215DC27E00EF8FD9 /* LoadMoreViewController.swift */,
+				045CE940215E20F700EF8FD9 /* LoadCollectionViewCell.swift */,
+			);
+			path = LoadMore;
 			sourceTree = "<group>";
 		};
 		70C6E0179E6FE98F47D5FA41 /* Frameworks */ = {
@@ -364,6 +378,7 @@
 				045000F1215B621500222A6E /* Movie.swift in Sources */,
 				04213BEA2158B72800CD9E0D /* BaseRequest.swift in Sources */,
 				04213BEE2158BAA300CD9E0D /* Urls.swift in Sources */,
+				045CE93F215DC27E00EF8FD9 /* LoadMoreViewController.swift in Sources */,
 				04213BF52158CFE800CD9E0D /* TitleRequest.swift in Sources */,
 				04213BF82158D8A100CD9E0D /* BaseError.swift in Sources */,
 				045000F3215B647800222A6E /* ListMovieRequest.swift in Sources */,
@@ -375,6 +390,7 @@
 				0415FF5821549B0D0036011D /* MoviePlay.xcdatamodeld in Sources */,
 				0415FF5021549B0D0036011D /* AppDelegate.swift in Sources */,
 				045000E7215B276400222A6E /* HomeTableViewCell.swift in Sources */,
+				045CE941215E20F700EF8FD9 /* LoadCollectionViewCell.swift in Sources */,
 				04213BFA2158D8D000CD9E0D /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
