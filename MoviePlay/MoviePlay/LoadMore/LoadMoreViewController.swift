@@ -15,8 +15,9 @@ class LoadMoreViewController: UIViewController, Reusable {
     
     var arrayLoadMore = [Movie]()
     
-    func configView() {
+    private func configView() {
         collection.dataSource = self
+        collection.delegate = self
     }
 
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class LoadMoreViewController: UIViewController, Reusable {
     }
 }
 
-extension LoadMoreViewController: UICollectionViewDataSource, NibLoadable {
+extension LoadMoreViewController: UICollectionViewDataSource, NibLoadable , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayLoadMore.count
     }
@@ -35,8 +36,13 @@ extension LoadMoreViewController: UICollectionViewDataSource, NibLoadable {
         cell.setContentForCell(move: arrayLoadMore[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController.instantiate()
+        detailViewController.setContentForCell(move: arrayLoadMore[indexPath.row])
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
-
 extension LoadMoreViewController: StoryboardSceneBased {
     static let sceneStoryboard = UIStoryboard(name: "Main", bundle: nil)
 }

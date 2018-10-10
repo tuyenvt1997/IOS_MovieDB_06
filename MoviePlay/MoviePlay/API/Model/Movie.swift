@@ -9,7 +9,8 @@
 import Foundation
 import ObjectMapper
 
-class Movie: Mappable {
+class Movie: Mappable, Codable {
+    
     var id: Int = 0
     var title = ""
     var posterPath = ""
@@ -40,7 +41,7 @@ class Movie: Mappable {
         return URLs.urlPosterImage + posterPath + "?api_key=" + APIKey.key
     }
     
-    func getURLImageOut() -> String {
+    func getURLImageBackDrop() -> String {
         return URLs.backdropImage + backdropPath + "?api_key=" + APIKey.key
     }
 }

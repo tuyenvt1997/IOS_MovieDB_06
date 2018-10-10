@@ -32,6 +32,5 @@ struct URLs {
     public static let backdropImage = "https://image.tmdb.org/t/p/original"
     
     public static let getTrailer = apiBaseUrl + "/movie/"
-
 }
 

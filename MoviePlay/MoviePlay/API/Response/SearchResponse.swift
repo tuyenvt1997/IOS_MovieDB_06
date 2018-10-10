@@ -10,8 +10,8 @@ import Foundation
 import ObjectMapper
 
 class SearchResponse: Mappable {
-    var page = 0
-    var totalPages = 0
+    var page: Int = 0
+    var totalPages: Int = 0
     var movies = [Movie]()
     
     required init(map: Map) {
