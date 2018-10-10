@@ -8,7 +8,8 @@ target 'MoviePlay' do
   pod 'ObjectMapper'
   pod 'Reusable'
   pod 'Kingfisher'
-  pod 'youtube-ios-player-helper' 
+  pod 'youtube-ios-player-helper'
+  pod 'Cosmos' 
   # Pods for MoviePlay
 
 end

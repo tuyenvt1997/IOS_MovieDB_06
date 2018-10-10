@@ -16,7 +16,7 @@ class KeyTrailerRequest: BaseRequest {
             "api_key": APIKey.key,
             "language": "en-US"
         ]
-        let url = URLs.trailer + "\(id)" + "/videos"
+        let url = URLs.getTrailer + "\(id)" + "/videos"
         super.init(url: url, requestType: .get, body: body)
     }
 }

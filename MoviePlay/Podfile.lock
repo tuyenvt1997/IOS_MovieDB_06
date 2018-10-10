@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
+  - Cosmos (16.0.0)
   - Kingfisher (4.9.0)
   - ObjectMapper (3.3.0)
   - Reusable (4.0.3):
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Cosmos
   - Kingfisher
   - ObjectMapper
   - Reusable
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Cosmos
     - Kingfisher
     - ObjectMapper
     - Reusable
@@ -26,11 +29,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Cosmos: 7bcee0fa858a9355a214f2a181be5dffcee42c81
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Reusable: 12b67a60e1f3e8c523cc910795dab733f58fbc7e
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: f246c45aed92497672f70a6562324fe0115b8edc
+PODFILE CHECKSUM: 41adb5fae2554347ce1c95193a4643f3c8613318
 
 COCOAPODS: 1.5.3

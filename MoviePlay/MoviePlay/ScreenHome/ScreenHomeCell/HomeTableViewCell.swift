@@ -48,7 +48,7 @@ class HomeTableViewCell: UITableViewCell, NibReusable  {
 
 extension HomeTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(for: indexPath) as  HomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as HomeCollectionViewCell
         delegate?.clickDetail(cell: self, cellCollection: cell)
         print(indexPath.row)
     }
