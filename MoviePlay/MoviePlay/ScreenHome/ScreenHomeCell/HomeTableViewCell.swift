@@ -11,6 +11,7 @@ import Reusable
 
 protocol HomeTableViewCellDelegate: class {
     func clickLoadAll(cell: HomeTableViewCell)
+    func clickDetail(cell: HomeTableViewCell, cellCollection: HomeCollectionViewCell )
 }
 
 class HomeTableViewCell: UITableViewCell, NibReusable  {
@@ -22,6 +23,7 @@ class HomeTableViewCell: UITableViewCell, NibReusable  {
 
     func configview() {          
         homeCollection.register(cellType: HomeCollectionViewCell.self)
+        homeCollection.delegate = self
     }
     
     override func awakeFromNib() {
@@ -44,3 +46,10 @@ class HomeTableViewCell: UITableViewCell, NibReusable  {
     }
 }
 
+extension HomeTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as  HomeCollectionViewCell
+        delegate?.clickDetail(cell: self, cellCollection: cell)
+        print(indexPath.row)
+    }
+}

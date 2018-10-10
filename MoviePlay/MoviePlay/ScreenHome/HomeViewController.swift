@@ -65,6 +65,7 @@ extension HomeViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as HomeCollectionViewCell
         cell.setContentForCell(move: arrayResponse[collectionView.tag].movies[indexPath.row])
+        cell.tag = indexPath.row
         return cell
     }
 }
@@ -74,5 +75,12 @@ extension HomeViewController : HomeTableViewCellDelegate {
         let loadMore = LoadMoreViewController.instantiate()
         loadMore.arrayLoadMore = arrayResponse[cell.getTag()].movies
         self.navigationController?.pushViewController(loadMore, animated: true)
+    }
+    
+    func clickDetail(cell: HomeTableViewCell ,cellCollection: HomeCollectionViewCell) {
+        let detail = DetailViewController.instantiate()
+        detail.movie = arrayResponse[cell.getTag()].movies[cellCollection.tag]
+        detail.setContentForCell(move: arrayResponse[cell.getTag()].movies[cellCollection.tag])
+        self.navigationController?.pushViewController(detail, animated: true)
     }
 }
