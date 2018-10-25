@@ -13,7 +13,7 @@ class KeyTrailerResponse: Mappable {
     var id = 0
     var keyTrailers: [KeyTrailer]?
     var name: [KeyTrailer]?
-    
+
     required init(map: Map) {
         mapping(map: map)
     }

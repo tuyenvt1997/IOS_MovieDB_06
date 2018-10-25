@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import ObjectMapper
+import Alamofire
 
-class SearchRequest: BaseRequest {
-    required init(language:String , page: Int ,query:String  ) {
-        let body: [String:Any] = [
-            "language": language,
-            "page": page,
+class GetSearchListRequest: BaseRequest {
+    required init(query: String, page: Int) {
+        let body: [String: Any]  = [
+            "api_key": APIKey.key,
+            "language": "en-US",
             "query": query
-            ]
-        super.init(url:URLs.aPISearchCollection, requestType: .get, body: body)
+        ]
+        let url = URLs.apiMovieSearch
+        super.init(url: url, requestType: .get, body: body)
     }
 }

@@ -14,6 +14,6 @@ class TitleRequest: BaseRequest {
         let body: [String: Any] = [
             "api_key": APIKey.key
         ]
-        super.init(url:URLs.aPITitleCollection, requestType: .get, body: body)
+        super.init(url:URLs.apiTitleCollection, requestType: .get, body: body)
     }
 }

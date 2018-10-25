@@ -15,8 +15,9 @@ class Movie: Mappable {
     var posterPath = ""
     var voteCount = ""
     var voteAverage = ""
-    var popularity = ""
+    var popularity: Double = 0.0
     var originalTitle = ""
+    var backdropPath = ""
     
     required init?(map: Map) {
         mapping(map: map)
@@ -32,9 +33,14 @@ class Movie: Mappable {
        voteAverage <- map["vote_average"]
        popularity <- map["popularity"]
        originalTitle <- map["original_title"]
+       backdropPath <- map["backdrop_path"]
     }
     
     func getURLImage() -> String {
         return URLs.urlPosterImage + posterPath + "?api_key=" + APIKey.key
+    }
+    
+    func getURLImageOut() -> String {
+        return URLs.backdropImage + backdropPath + "?api_key=" + APIKey.key
     }
 }

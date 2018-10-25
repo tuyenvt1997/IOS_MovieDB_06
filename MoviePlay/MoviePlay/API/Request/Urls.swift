@@ -9,27 +9,29 @@
 import Foundation
 
 struct URLs {
-    private static var aPIBaseUrl = "https://api.themoviedb.org/3"
+    private static var apiBaseUrl = "https://api.themoviedb.org/3"
     
-    public static var urlYoutobe = "https://www.youtube.com/embed"
+    public static var youtubeURL = "https://www.youtube.com/embed"
     
-    public static let aPISearchCollection = aPIBaseUrl + "/search/collection"
+    public static let apiMovieSearch = apiBaseUrl + "/search/movie"
     
-    public static let aPITitleCollection = aPIBaseUrl + "/genre/movie/list"
+    public static let apiTitleCollection = apiBaseUrl + "/genre/movie/list"
     
-    public static let apiMoviesByGenres = aPIBaseUrl + "/movie/"
+    public static let apiMoviesByGenres = apiBaseUrl + "/movie/"
     
-    public static let apiMoviesNowPlaying = aPIBaseUrl + "/movie/now_playing"
+    public static let apiMoviesNowPlaying = apiBaseUrl + "/movie/now_playing"
     
-    public static let apiMoviesPopular = aPIBaseUrl + "/movie/popular"
+    public static let apiMoviesPopular = apiBaseUrl + "/movie/popular"
     
-    public static let apiMoviesTopRated = aPIBaseUrl + "/movie/top_rated"
+    public static let apiMoviesTopRated = apiBaseUrl + "/movie/top_rated"
     
-    public static let apiMoviesUpcoming = aPIBaseUrl + "/movie/upcoming"
+    public static let apiMoviesUpcoming = apiBaseUrl + "/movie/upcoming"
     
     public static let urlPosterImage = "https://image.tmdb.org/t/p/w300_and_h450_bestv2"
     
-    public static let trailer = aPIBaseUrl + "/movie/"
+    public static let backdropImage = "https://image.tmdb.org/t/p/original"
+    
+    public static let getTrailer = apiBaseUrl + "/movie/"
 
 }
 
